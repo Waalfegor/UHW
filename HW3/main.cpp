@@ -1,5 +1,4 @@
-﻿#include <iostream>
-#include "Circle.h"
+﻿#include "Circle.h"
 #include "Vector3.h"
 
 using namespace std;
