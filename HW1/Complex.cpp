@@ -1,53 +1,30 @@
 ﻿#include "Complex.h"
 
 Complex::Complex()
-    {
-        re = 0;
-        im = 0;
-    }
+{
+	re = 0;
+	im = 0;
+}
 
 Complex::Complex(double re, double im)
-    {
-        this->re = re;
-        this->im = im;
-    }
-
-void Complex::SetReIm(double re, double im)
-    {
-        this->re = re;
-        this->im = im;
-    }
-
-std::ostream& operator<<(std::ostream& out, const Complex& c) {
-	out << c.re;
-	if (c.im == 0) out << "+0i";
-	else if (c.im > 0) out << "+" << c.im << "i";
-	else out << c.im << "i";
-	return out;
+{
+	this->re = re;
+	this->im = im;
 }
 
 Complex Complex::operator+(Complex& num)
 {
-	Complex temp;
-	temp.re = this->re + num.re;
-	temp.im = this->im + num.im;
-	return temp;
+	return { re + num.re, im + num.im };
 }
 
 Complex Complex::operator-(Complex& num)
 {
-	Complex temp;
-	temp.re = this->re - num.re;
-	temp.im = this->im - num.im;
-	return temp;
+	return { re - num.re, im - num.im };
 }
 
 Complex Complex::operator*(Complex& num)
 {
-	Complex temp;
-	temp.re = this->re * num.re;
-	temp.im = this->im * num.im;
-	return temp;
+	return { re * num.re - im * num.im, re * num.im + im * num.re };
 }
 
 Complex Complex::operator/(Complex& num)
@@ -58,7 +35,16 @@ Complex Complex::operator/(Complex& num)
 	return temp;
 }
 
+std::ostream& operator<<(std::ostream& out, const Complex& c) {
+	out << c.re;
+	if (c.im == 0) out << "+0i";
+	else if (c.im > 0) out << "+" << c.im << "i";
+	else out << c.im << "i";
+	return out;
+}
+
 double Complex::Abs()
 {
 	return {sqrt(pow(re, 2) + pow(im, 2))};
 }
+
