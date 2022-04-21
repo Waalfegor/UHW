@@ -13,23 +13,11 @@ private:
 
 public:
 
-	Complex()
-	{
-		re = 0;
-		im = 0;
-	}
-	Complex(double re, double im)
-	{
-		this->re = re;
-		this->im = im;
-	}
-
-	void SetReIm(double re, double im)
-	{
-		this->re = re;
-		this->im = im;
-	}
-
+	Complex();
+	Complex(double re, double im);
+	
+	void SetReIm(double re, double im);
+	
 	Complex operator+(Complex& num);
 	Complex operator-(Complex& num);
 	Complex operator*(Complex& num);
