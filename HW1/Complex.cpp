@@ -1,5 +1,23 @@
 ﻿#include "Complex.h"
 
+Complex::Complex()
+    {
+        re = 0;
+        im = 0;
+    }
+
+Complex::Complex(double re, double im)
+    {
+        this->re = re;
+        this->im = im;
+    }
+
+void Complex::SetReIm(double re, double im)
+    {
+        this->re = re;
+        this->im = im;
+    }
+
 std::ostream& operator<<(std::ostream& out, const Complex& c) {
 	out << c.re;
 	if (c.im == 0) out << "+0i";
