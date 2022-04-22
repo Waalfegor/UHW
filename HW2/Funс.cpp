@@ -1,4 +1,4 @@
-#include "Funñ.h"
+#include "FunÃ±.h"
 
 int InputSizeArr(int n)
 {
@@ -56,7 +56,11 @@ vector<int> ReplaceElementsBy5(vector<int> Arr)
 
 vector<int> SelectAction(vector<int> Arr, int choice)
 {
-	cout << "Choose what to do with the array:\n" << "1 - Invert\n" << "2 - Remove minuses\n" << "3 - Replace the element values with 5\n" << "4 - Replace element values with random values\n";
+	cout << "Choose what to do with the array:\n" 
+		<< "1 - Invert\n"
+		<< "2 - Remove minuses\n" 
+		<< "3 - Replace the element values with 5\n"
+		<< "4 - Replace element values with random values\n";
 	cin >> choice;
 	if ((!cin) || (choice < 1) || (choice > 4))
 	{
