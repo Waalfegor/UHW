@@ -14,6 +14,7 @@ int main()
 	cout << "Sorted int array: \n";
 	bubbleSort(Arr, n);
 	OutArr(Arr, n);
+	delete[] Arr;
 	double* doubleArr = new double[n];
 	FillArr(doubleArr, n);
 	cout << "Your double array: \n";
@@ -21,5 +22,6 @@ int main()
 	cout << "Sorted double array: \n";
 	bubbleSort(doubleArr, n);
 	OutArr(doubleArr, n);
+	delete[] doubleArr;
 }
 
