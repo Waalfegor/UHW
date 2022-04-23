@@ -12,6 +12,12 @@ Complex::Complex(double re, double im)
 	this->im = im;
 }
 
+void Complex::SetReIm(double re, double im)
+{
+	this->re = re;
+	this->im = im;
+}
+
 Complex Complex::operator+(Complex& num)
 {
 	return { re + num.re, im + num.im };
