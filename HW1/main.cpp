@@ -11,6 +11,7 @@ int main()
 	if (!fin.is_open())
 	{
 		cout << "Opening failed" << endl;
+		return 0;
 	}
 	else
 	{
