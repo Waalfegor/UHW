@@ -9,9 +9,9 @@ int main()
 
 	for (int i = 1; i < 8; i++)
 	{
-		if (i < 4) p[i - 1] = new Apartment(1000 * i * 2);
-		else if (i < 6) p[i - 1] = new Car(200 * i * 2);
-		else p[i - 1] = new CountryHouse(500 * i * 2);
+		if (i < 4) p[i - 1] = new Apartment(1000 * (double)i * 2);
+		else if (i < 6) p[i - 1] = new Car(200 * (double)i * 2);
+		else p[i - 1] = new CountryHouse(500 * (double)i * 2);
 	}
 	for (int i = 1; i < 8; i++)
 	{
