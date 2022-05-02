@@ -1,11 +1,11 @@
-#ifndef STATIONARY_COMPUTER_H_
-#define STATIONARY_COMPUTER_H_ 
+#ifndef STATIONARYCOMPUTER_H_
+#define STATIONARYCOMPUTER_H_ 
 
 
 #include "Screen.h"
 #include "Keyboard.h"
 
-class Stationary_Computer : public Screen, public Keyboard
+class StationaryComputer : public Screen, public Keyboard
 {
 	void pixel() override {};
 	void Key() override {};
