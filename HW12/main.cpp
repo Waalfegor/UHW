@@ -1,4 +1,4 @@
-﻿#include "MyArr.cpp"
+﻿#include "MyArr.h"
 
 int main()
 {
